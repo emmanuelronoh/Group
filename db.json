@@ -1,0 +1,145 @@
+{
+    "categories": [
+        {
+            "id": "skincare",
+            "name": "Skincare",
+            "description": "All skincare products including cleansers, moisturizers, and more.",
+            "products": [
+                {
+                    "id": "1",
+                    "name": "Hydrating Facial Cleanser",
+                    "price": 19.99,
+                    "image": "images/cleanser.jpg"
+                },
+                {
+                    "id": "2",
+                    "name": "Vitamin C Serum",
+                    "price": 29.99,
+                    "image": "images/serum.jpg"
+                }
+            ]
+        },
+        {
+            "id": "makeup",
+            "name": "Makeup",
+            "description": "Explore our range of makeup products from foundations to lipsticks.",
+            "products": [
+                {
+                    "id": "3",
+                    "name": "Long-lasting Foundation",
+                    "price": 34.99,
+                    "image": "images/foundation.jpg"
+                },
+                {
+                    "id": "4",
+                    "name": "Matte Lipstick",
+                    "price": 15.99,
+                    "image": "images/lipstick.jpg"
+                }
+            ]
+        },
+        {
+            "id": "haircare",
+            "name": "Haircare",
+            "description": "Shampoos, conditioners, and treatments for healthy hair.",
+            "products": [
+                {
+                    "id": "5",
+                    "name": "Moisturizing Shampoo",
+                    "price": 24.99,
+                    "image": "images/shampoo.jpg"
+                },
+                {
+                    "id": "6",
+                    "name": "Repairing Conditioner",
+                    "price": 22.99,
+                    "image": "images/conditioner.jpg"
+                }
+            ]
+        },
+        {
+            "id": "fragrances",
+            "name": "Fragrances",
+            "description": "Perfumes and colognes to match every occasion.",
+            "products": [
+                {
+                    "id": "7",
+                    "name": "Eau de Parfum",
+                    "price": 49.99,
+                    "image": "images/perfume.jpg"
+                },
+                {
+                    "id": "8",
+                    "name": "Fresh Cologne",
+                    "price": 39.99,
+                    "image": "images/cologne.jpg"
+                }
+            ]
+        },
+        {
+            "id": "tools",
+            "name": "Tools & Brushes",
+            "description": "Makeup tools and brushes for professional application.",
+            "products": [
+                {
+                    "id": "9",
+                    "name": "Brush Set",
+                    "price": 25.99,
+                    "image": "images/brushes.jpg"
+                },
+                {
+                    "id": "10",
+                    "name": "Makeup Sponge",
+                    "price": 9.99,
+                    "image": "images/sponge.jpg"
+                }
+            ]
+        },
+        {
+            "id": "sets",
+            "name": "Gift Sets",
+            "description": "Perfectly curated sets for gifts and special occasions.",
+            "products": [
+                {
+                    "id": "11",
+                    "name": "Skincare Gift Set",
+                    "price": 59.99,
+                    "image": "images/skincare_set.jpg"
+                },
+                {
+                    "id": "12",
+                    "name": "Makeup Starter Kit",
+                    "price": 89.99,
+                    "image": "images/makeup_kit.jpg"
+                }
+            ]
+        },
+        {
+            "id": "newArrivals",
+            "name": "New Arrivals",
+            "description": "Check out the latest products added to our store.",
+            "products": [
+                {
+                    "id": "13",
+                    "name": "New Arrival Product 1",
+                    "price": 19.99,
+                    "image": "images/new_product1.jpg"
+                },
+                {
+                    "id": "14",
+                    "name": "New Arrival Product 2",
+                    "price": 29.99,
+                    "image": "images/new_product2.jpg"
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "id": "user1",
+            "name": "John Doe",
+            "email": "john@example.com",
+            "password": "password123"
+        }
+    ]
+}

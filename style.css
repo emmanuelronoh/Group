@@ -1,0 +1,420 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header .btn {
+  background: #fff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  transition: background 0.3s, color 0.3s;
+}
+
+header .btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Main Layout */
+main {
+  padding: 20px;
+}
+
+.content-section {
+  padding: 20px;
+  background: #fff;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+  margin-top: 0;
+}
+
+/* Home Modal Container */
+.home-modal-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.home-sidebar {
+  width: 20%;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-sidebar h2 {
+  margin-top: 0;
+}
+
+.home-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.home-sidebar ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.home-sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Category Styles */
+.home-content {
+  width: 80%;
+  padding: 20px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.category-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.category-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.category-item button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.category-item button:hover {
+  background: #0056b3;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product-item button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-item button:hover {
+  background: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Cart Styles */
+#cartModal .modal-content {
+  padding: 20px;
+}
+
+#cartItems {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #c82333;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header .btn {
+  background: #fff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  transition: background 0.3s, color 0.3s;
+}
+
+header .btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Dark Mode Styles */
+.dark-mode body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background: #333;
+}
+
+.dark-mode header .btn {
+  background: #444;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.dark-mode header .btn:hover {
+  background: #555;
+  color: #e0e0e0;
+}
+
+.dark-mode .content-section {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+.dark-mode .product-item {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .modal-content {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode footer {
+  background: #222;
+  color: #888;
+}
+
+.button {
+    background-color: #0037ff;
+    padding: 0px;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}

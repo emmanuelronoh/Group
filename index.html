@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetics Shop</title>
+    <link rel="stylesheet" href="style.css"> <!-- This links to our design to make the page look nice -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Cosmetics Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('products')">Products</a></li>
+                    <li><a href="#" onclick="showSection('about')">About Us</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#" class="btn" onclick="openModal('loginModal')">Login</a></li>
+                    <li><a href="#" class="btn" onclick="openModal('signupModal')">Sign Up</a></li>
+                    <li><a href="#" class="btn" onclick="openModal('cartModal')">Cart (<span
+                                id="cartItemCount">0</span>)</a></li>
+                    <li><a href="#" class="btn" onclick="openModal('addItemModal')">Add New Product</a></li>
+                    <button id="darkModeToggle" class="btn">Toggle Dark Mode</button>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <div class="home-modal-container">
+                <aside class="home-sidebar">
+                    <h2>Categories</h2>
+                    <ul>
+
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('skincare')">Skincare</a></li>
+                        </button><br>
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('makeup')">Makeup</a></li>
+                        </button><br>
+
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('haircare')">Haircare</a></li>
+                        </button><br> 
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('fragrances')">Fragrances</a></li>
+                        </button><br>
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('tools')">Tools & Brushes</a></li>
+                        </button><br>
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('sets')">Gift Sets</a></li>
+                        </button class="button"><br>
+                        <button class="button">
+                            <li><a type="button" class="btn btn-outline-warning"
+                                    onclick="showCategoryItems('newArrivals')">New Arrivals</a>
+                            </li>
+                        </button><br>
+                    </ul>
+                </aside>
+                <main class="home-content" id="homeContent">
+                    <!-- Category items will be dynamically loaded here -->
+                </main>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="content-section">
+            <h2>Products</h2>
+            <p>List of products will be here.</p>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="content-section">
+            <h2>About Us</h2>
+            <p>Information about the company.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Email: support@cosmeticsshop.com</p>
+            <p>Phone: +254-456-7890</p>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Forgot your password? <a href="#" onclick="openModal('forgotPasswordModal')">Reset it</a></p>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="signupName">Name:</label>
+                <input type="text" id="signupName" required>
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" required>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('forgotPasswordModal')">&times;</span>
+            <h2>Forgot Password</h2>
+            <form id="forgotPasswordForm">
+                <label for="forgotPasswordEmail">Email:</label>
+                <input type="email" id="forgotPasswordEmail" required>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cartModal')">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <p>Total: $<span id="cartTotal">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addItemModal')">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="addItemForm">
+                <label for="itemName">Product Name:</label>
+                <input type="text" id="itemName" required>
+                <label for="itemPrice">Price ($):</label>
+                <input type="number" id="itemPrice" step="0.01" required>
+                <label for="itemCategory">Category:</label>
+                <select id="itemCategory" required>
+                    <option value="skincare">Skincare</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="haircare">Haircare</option>
+                    <option value="fragrances">Fragrances</option>
+                    <option value="tools">Tools & Brushes</option>
+                    <option value="sets">Gift Sets</option>
+                    <option value="newArrivals">New Arrivals</option>
+                </select>
+                <label for="itemImage">Product Image:</label>
+                <input type="file" id="itemImage" accept="image/*" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cosmetics Shop. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script> <!-- This links to our JavaScript to make things work -->
+</body>
+
+</html>
